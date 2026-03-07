@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Redirecting...</title>
+    <script>
+      (function () {
+        var pathParts = window.location.pathname.split('/').filter(Boolean);
+        var repo = pathParts.length > 0 ? pathParts[0] : '';
+        var target = repo ? '/' + repo + '/' : '/';
+        if (window.location.pathname !== target) {
+          window.location.replace(target);
+        }
+      })();
+    </script>
+  </head>
+  <body style="font-family: Arial, sans-serif; padding: 2rem;">
+    <p>Redirecting to site...</p>
+  </body>
+</html>
