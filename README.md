@@ -26,11 +26,6 @@ Professional marketing + lead-generation website for adult beginner guitar lesso
 5. Open:
    - `http://localhost:3000`
 
-## GitHub Note
-- A root `index.html` is included for repository compatibility.
-- The actual Next.js homepage source is `src/app/page.tsx`.
-- If you deploy with Vercel/Netlify, `index.html` in root is not used at runtime.
-
 ## Preview Options
 - Recommended (full app preview):
   ```bash
@@ -38,12 +33,11 @@ Professional marketing + lead-generation website for adult beginner guitar lesso
   npm run dev
   ```
   Then open `http://localhost:3000`.
-- Production-like preview:
+- Production-like preview (static export):
   ```bash
   npm run build
-  npm run start
+  npx serve out
   ```
-  Then open `http://localhost:3000`.
 
 ## GitHub Pages Deploy
 `localhost` is only for local development. For GitHub hosting, deploy the static export from `out/`.
@@ -88,7 +82,7 @@ Expected EmailJS template params used by the form:
 If you prefer FormSubmit fallback instead, set:
 - `NEXT_PUBLIC_LEAD_FORM_ENDPOINT=https://formsubmit.co/ajax/richardb.checkmark@gmail.com`
 
-If you prefer server-side handling, set `NEXT_PUBLIC_LEAD_FORM_ENDPOINT=/api/leads` and configure `FORM_WEBHOOK_URL`.
+Server-side API routes are not available in the static export. All form submissions go through EmailJS or FormSubmit from the browser.
 
 ## Routes
 - `/`

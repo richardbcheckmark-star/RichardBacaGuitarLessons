@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import type { ReactNode } from "react";
+import { Suspense, type ReactNode } from "react";
 import { Cormorant_Garamond, Source_Sans_3 } from "next/font/google";
 
 import { GoogleAnalytics } from "@/components/analytics/google-analytics";
@@ -51,15 +51,17 @@ const RootLayout = ({ children }: Readonly<{ children: ReactNode }>) => {
         >
           Skip to content
         </a>
-        <div className="relative flex min-h-screen flex-col">
-          <SiteHeader />
-          <main id="page-content" className="flex-1">
-            {children}
-          </main>
-          <SiteFooter />
-          <StickyMobileCta />
-        </div>
-        <GoogleAnalytics />
+        <Suspense>
+          <div className="relative flex min-h-screen flex-col">
+            <SiteHeader />
+            <main id="page-content" className="flex-1">
+              {children}
+            </main>
+            <SiteFooter />
+            <StickyMobileCta />
+          </div>
+          <GoogleAnalytics />
+        </Suspense>
       </body>
     </html>
   );

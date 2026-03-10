@@ -17,7 +17,7 @@ const nextConfig: NextConfig = {
         hostname: "static.wixstatic.com"
       }
     ]
-  }
+  },
 };
 
 export default nextConfig;
