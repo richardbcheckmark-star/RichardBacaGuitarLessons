@@ -2,7 +2,7 @@ import type { FaqItem, LocalPageContent, NavItem, Testimonial } from "@/types/co
 
 export const siteConfig = {
   siteName: "Richard Baca Guitar Lessons",
-  siteUrl: "https://www.richardbacaguitarlessons.com",
+  siteUrl: "https://richardbcheckmark-star.github.io/RichardBacaGuitarLessons",
   defaultOgImage: "/og-image.svg",
   tagLine: "Guitar lessons for beginners and intermediates alike",
   contact: {
