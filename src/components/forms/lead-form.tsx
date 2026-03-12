@@ -14,7 +14,7 @@ type LeadFormProps = {
 type FieldErrors = Partial<Record<keyof LeadFormPayload, string>>;
 const defaultLeadEndpoint = "https://formsubmit.co/ajax/richardb.checkmark@gmail.com";
 const emailJsEndpoint = "https://api.emailjs.com/api/v1.0/email/send";
-const defaultEmailJsPublicKey = "CWbaK2zzCESmVew";
+const defaultEmailJsPublicKey = "dxfnNqiq1CT6IdvKw";
 const defaultEmailJsServiceId = "service_jhhmy66";
 const defaultEmailJsTemplateId = "template_05419zr";
 
