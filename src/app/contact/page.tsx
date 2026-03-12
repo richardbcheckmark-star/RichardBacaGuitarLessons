@@ -14,7 +14,14 @@ export const metadata = buildMetadata({
   title: "Book a Free Guitar Consultation",
   description:
     "Request your free guitar consultation and get a personalized beginner plan for Albuquerque, Los Lunas, or Bosque Farms.",
-  path: "/contact"
+  path: "/contact",
+  keywords: [
+    "book guitar lesson Albuquerque",
+    "free guitar consultation Albuquerque NM",
+    "schedule guitar lessons near me",
+    "contact guitar teacher Albuquerque",
+    "guitar lessons 5413 Lomas Blvd NE"
+  ]
 });
 
 const ContactPage = () => {

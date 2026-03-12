@@ -10,7 +10,14 @@ const pageContent = localPages.losLunas;
 export const metadata = buildMetadata({
   title: pageContent.pageTitle,
   description: pageContent.pageDescription,
-  path: `/${pageContent.slug}`
+  path: `/${pageContent.slug}`,
+  keywords: [
+    "guitar lessons Los Lunas NM",
+    "learn guitar Los Lunas New Mexico",
+    "guitar teacher near Los Lunas",
+    "beginner guitar lessons Los Lunas",
+    "private guitar instruction Los Lunas"
+  ]
 });
 
 const LosLunasPage = () => {

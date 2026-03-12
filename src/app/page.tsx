@@ -14,7 +14,15 @@ export const metadata = buildMetadata({
   title: "Adult Beginner Guitar Lessons in Albuquerque, NM",
   description:
     "Friendly in-person guitar lessons for adult beginners in Albuquerque, Los Lunas, and Bosque Farms. Start with a free consultation.",
-  path: "/"
+  path: "/",
+  keywords: [
+    "guitar lessons Albuquerque NM",
+    "beginner guitar lessons Albuquerque",
+    "adult guitar lessons near me",
+    "learn guitar in Albuquerque",
+    "private guitar instructor Albuquerque",
+    "in-person guitar lessons Albuquerque"
+  ]
 });
 
 const HomePage = () => {
@@ -28,7 +36,8 @@ const HomePage = () => {
           <div className="relative overflow-hidden rounded-3xl border border-brand-sand shadow-card">
             <Image
               src="https://static.wixstatic.com/media/d40363_6cf9369887d74e0dbba8ceb0338c2c9b~mv2.png"
-              alt="Guitar lesson banner"
+              alt="Richard Baca teaching an adult beginner guitar lesson in Albuquerque NM"
+              title="Guitar lessons for adult beginners in Albuquerque, NM"
               fill
               priority
               className="object-cover"

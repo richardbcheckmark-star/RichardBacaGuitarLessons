@@ -15,7 +15,14 @@ export const metadata = buildMetadata({
   title: "Beginner Guitar Lesson Program",
   description:
     "See exactly how the beginner guitar lesson path works, from your first month through your first 90 days.",
-  path: "/lessons"
+  path: "/lessons",
+  keywords: [
+    "beginner guitar program Albuquerque",
+    "guitar lesson plan for adults",
+    "structured guitar lessons NM",
+    "one-on-one guitar lessons Albuquerque",
+    "acoustic guitar lessons Albuquerque"
+  ]
 });
 
 const LessonsPage = () => {

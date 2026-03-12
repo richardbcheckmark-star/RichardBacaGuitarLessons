@@ -10,7 +10,14 @@ export const metadata = buildMetadata({
   title: "Student Testimonials",
   description:
     "See beginner guitar student outcomes from Albuquerque, Los Lunas, and Bosque Farms.",
-  path: "/testimonials"
+  path: "/testimonials",
+  keywords: [
+    "guitar lesson reviews Albuquerque",
+    "guitar student testimonials NM",
+    "best guitar teacher Albuquerque reviews",
+    "adult beginner guitar success stories",
+    "guitar lessons Albuquerque testimonials"
+  ]
 });
 
 const TestimonialsPage = () => {

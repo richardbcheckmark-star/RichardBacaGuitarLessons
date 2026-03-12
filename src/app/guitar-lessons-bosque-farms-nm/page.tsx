@@ -10,7 +10,14 @@ const pageContent = localPages.bosqueFarms;
 export const metadata = buildMetadata({
   title: pageContent.pageTitle,
   description: pageContent.pageDescription,
-  path: `/${pageContent.slug}`
+  path: `/${pageContent.slug}`,
+  keywords: [
+    "guitar lessons Bosque Farms NM",
+    "learn guitar Bosque Farms New Mexico",
+    "guitar teacher near Bosque Farms",
+    "beginner guitar lessons Bosque Farms",
+    "private guitar instruction Bosque Farms"
+  ]
 });
 
 const BosqueFarmsPage = () => {

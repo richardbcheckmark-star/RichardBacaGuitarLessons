@@ -38,6 +38,12 @@ export const metadata: Metadata = {
     siteName: siteConfig.siteName,
     url: absoluteUrl("/"),
     images: [absoluteUrl(siteConfig.defaultOgImage)]
+  },
+  other: {
+    "geo.region": "US-NM",
+    "geo.placename": "Albuquerque",
+    "geo.position": "35.0844;-106.6504",
+    "ICBM": "35.0844, -106.6504"
   }
 };
 

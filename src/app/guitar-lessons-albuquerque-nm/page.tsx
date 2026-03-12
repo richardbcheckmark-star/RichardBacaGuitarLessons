@@ -10,7 +10,14 @@ const pageContent = localPages.albuquerque;
 export const metadata = buildMetadata({
   title: pageContent.pageTitle,
   description: pageContent.pageDescription,
-  path: `/${pageContent.slug}`
+  path: `/${pageContent.slug}`,
+  keywords: [
+    "guitar lessons Albuquerque New Mexico",
+    "learn guitar Albuquerque",
+    "Albuquerque guitar teacher",
+    "private guitar lessons Albuquerque NM",
+    "best guitar lessons in Albuquerque"
+  ]
 });
 
 const AlbuquerquePage = () => {

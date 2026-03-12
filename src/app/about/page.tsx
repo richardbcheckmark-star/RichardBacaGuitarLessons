@@ -10,7 +10,14 @@ export const metadata = buildMetadata({
   title: "About Your Guitar Instructor",
   description:
     "Meet your guitar instructor and learn the teaching approach built for adult beginners in Albuquerque, Los Lunas, and Bosque Farms.",
-  path: "/about"
+  path: "/about",
+  keywords: [
+    "guitar instructor Albuquerque",
+    "Richard Baca guitar teacher",
+    "Albuquerque guitar studio",
+    "guitar teacher near me Albuquerque NM",
+    "session musician guitar instructor"
+  ]
 });
 
 const coachingValues = [
@@ -29,10 +36,26 @@ const coachingValues = [
 ];
 
 const studioPhotos = [
-  { src: "https://static.wixstatic.com/media/d40363_d4769241c85744b59df0a45ce9272226~mv2.jpg", alt: "Studio view 1" },
-  { src: "https://static.wixstatic.com/media/d40363_fefd63608079409ead77ad0fa52f7ff7~mv2.jpg", alt: "Studio view 2" },
-  { src: "https://static.wixstatic.com/media/d40363_e766a3eb3adf4034b67fdd5fcc5aeba0~mv2.jpg", alt: "Studio view 3" },
-  { src: "https://static.wixstatic.com/media/d40363_b069edc492fa4638a6056030850ef2b7~mv2.jpg", alt: "Studio view 4" }
+  {
+    src: "https://static.wixstatic.com/media/d40363_d4769241c85744b59df0a45ce9272226~mv2.jpg",
+    alt: "Guitar lesson studio in Albuquerque NM with acoustic guitars",
+    title: "Albuquerque guitar lesson studio"
+  },
+  {
+    src: "https://static.wixstatic.com/media/d40363_fefd63608079409ead77ad0fa52f7ff7~mv2.jpg",
+    alt: "Private guitar lesson room at Richard Baca Guitar Lessons Albuquerque",
+    title: "Private guitar instruction room in Albuquerque"
+  },
+  {
+    src: "https://static.wixstatic.com/media/d40363_e766a3eb3adf4034b67fdd5fcc5aeba0~mv2.jpg",
+    alt: "Albuquerque guitar studio setup for beginner and intermediate students",
+    title: "Beginner-friendly guitar studio in Albuquerque NM"
+  },
+  {
+    src: "https://static.wixstatic.com/media/d40363_b069edc492fa4638a6056030850ef2b7~mv2.jpg",
+    alt: "One-on-one guitar instruction space at 5413 Lomas Blvd NE Albuquerque",
+    title: "Guitar lesson space on Lomas Blvd in Albuquerque"
+  }
 ];
 
 const AboutPage = () => {
@@ -53,7 +76,8 @@ const AboutPage = () => {
                 <div className="relative aspect-square w-full overflow-hidden rounded-2xl border border-brand-sand bg-brand-bone shadow-soft">
                   <Image
                     src="https://static.wixstatic.com/media/d40363_1caac4cf56b34b8db5ad90f1e7582008~mv2.jpg"
-                    alt="Richard Baca"
+                    alt="Richard Baca guitar instructor in Albuquerque NM"
+                    title="Richard Baca - Guitar Instructor, Albuquerque NM"
                     fill
                     unoptimized
                     className="object-cover"
@@ -93,6 +117,7 @@ const AboutPage = () => {
                     <Image
                       src={photo.src}
                       alt={photo.alt}
+                      title={photo.title}
                       fill
                       unoptimized
                       className="object-cover"

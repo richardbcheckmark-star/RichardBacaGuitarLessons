@@ -12,7 +12,14 @@ export const metadata = buildMetadata({
   title: "Guitar Lesson Pricing",
   description:
     "Transparent beginner guitar lesson pricing with a free consultation and flexible package options.",
-  path: "/pricing"
+  path: "/pricing",
+  keywords: [
+    "guitar lesson cost Albuquerque",
+    "guitar lesson pricing NM",
+    "affordable guitar lessons Albuquerque",
+    "how much are guitar lessons Albuquerque",
+    "free guitar consultation Albuquerque"
+  ]
 });
 
 const PricingPage = () => {
