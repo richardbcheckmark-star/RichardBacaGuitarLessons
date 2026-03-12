@@ -121,38 +121,35 @@ export const LeadForm = ({ sourcePage }: LeadFormProps) => {
         body: JSON.stringify(requestBody)
       });
 
-      const result = (await response.json()) as
-        | { ok: boolean; error?: string }
-        | { success?: string; message?: string }
-        | { status?: number; text?: string };
-
       if (isEmailJs) {
-        const emailJsSuccess = response.ok;
-        if (!emailJsSuccess) {
-          const message =
-            typeof result === "object" && result !== null && "text" in result && typeof result.text === "string"
-              ? result.text
-              : "Could not submit your request through EmailJS. Please verify your template settings.";
-          setStatusMessage(message);
-          setStatusType("error");
-          return;
-        }
-      } else if (isDirectFormSubmit) {
-        const success = typeof result === "object" && result !== null && "success" in result && result.success === "true";
-        if (!response.ok || !success) {
-          const message =
-            typeof result === "object" && result !== null && "message" in result && typeof result.message === "string"
-              ? result.message
-              : "Could not submit your request. Please verify FormSubmit email activation and try again.";
-          setStatusMessage(message);
+        const responseText = await response.text();
+        if (!response.ok) {
+          setStatusMessage(responseText || "Could not submit your request through EmailJS. Please verify your template settings.");
           setStatusType("error");
           return;
         }
       } else {
-        if (!response.ok || !("ok" in result) || !result.ok) {
-          setStatusMessage("Could not submit your request. Please try again.");
-          setStatusType("error");
-          return;
+        const result = (await response.json()) as
+          | { ok: boolean; error?: string }
+          | { success?: string; message?: string };
+
+        if (isDirectFormSubmit) {
+          const success = typeof result === "object" && result !== null && "success" in result && result.success === "true";
+          if (!response.ok || !success) {
+            const message =
+              typeof result === "object" && result !== null && "message" in result && typeof result.message === "string"
+                ? result.message
+                : "Could not submit your request. Please verify FormSubmit email activation and try again.";
+            setStatusMessage(message);
+            setStatusType("error");
+            return;
+          }
+        } else {
+          if (!response.ok || !("ok" in result) || !result.ok) {
+            setStatusMessage("Could not submit your request. Please try again.");
+            setStatusType("error");
+            return;
+          }
         }
       }
 
