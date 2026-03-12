@@ -88,7 +88,7 @@ export const LeadForm = ({ sourcePage }: LeadFormProps) => {
       const isDirectFormSubmit = leadEndpoint.includes("formsubmit.co");
       const requestBody = isEmailJs
         ? {
-            user_id: emailJsPublicKey,
+            public_key: emailJsPublicKey,
             service_id: emailJsServiceId,
             template_id: emailJsTemplateId,
             template_params: {
